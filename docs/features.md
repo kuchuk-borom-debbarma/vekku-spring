@@ -1,0 +1,17 @@
+- Functional requirements
+  - User sign up and sign in
+  - CRUD Content(s)
+  - CRUD Tag(s)
+  - Adding tags to contents
+  - Existing Tag suggestions for content
+  - New tag suggestion based on content
+  - Smart Fuzzy search for tags
+  - Smart search for content
+    - Semantic aware
+  - [PLANNED] Learning tag suggestion system from user
+
+- Technical requirements
+  - Caching system for reducing API and database calls
+  - Async pattern where it makes sense
+  - CRON job
+  - Rate limiting per user and feature and global rate limiting
