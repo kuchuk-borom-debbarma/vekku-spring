@@ -1,15 +1,19 @@
-package dev.kuku.vekku.domains.auth.internal.entities;
+package dev.kuku.vekku.domains.auth.internal.repos.entities;
 
 import jakarta.persistence.*;
 import java.util.Date;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "users")
 @AllArgsConstructor
 @NoArgsConstructor
-public class VekkuUser {
+@Getter
+@Setter
+public class User {
   @Id
   @GeneratedValue(strategy = GenerationType.UUID)
   private String id;

@@ -1,3 +1,3 @@
-package dev.kuku.vekku.domains.auth.model;
+package dev.kuku.vekku.domains.auth.models;
 
 public record SignInData(String accessToken) {}

@@ -1,4 +1,4 @@
-package dev.kuku.vekku.domains.auth.model;
+package dev.kuku.vekku.domains.auth.models;
 
 import java.util.Date;
 

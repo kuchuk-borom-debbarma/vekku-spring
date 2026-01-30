@@ -1,27 +1,28 @@
 package dev.kuku.vekku.domains.auth;
 
-import dev.kuku.vekku.domains.auth.model.SignInData;
-import dev.kuku.vekku.domains.auth.model.VekkuUser;
+import dev.kuku.vekku.domains.auth.models.SignInData;
+import dev.kuku.vekku.domains.auth.models.VekkuUser;
 import dev.kuku.vekku.domains.auth.params.SignInParam;
 import dev.kuku.vekku.domains.auth.params.StartSignupParam;
 import dev.kuku.vekku.domains.auth.params.VerifySignupToken;
+import javax.annotation.Nullable;
 import org.springframework.stereotype.Service;
 
 @Service
 public interface AuthService {
   /**
-   * Start a signup process that will return a magic link. User will need to click it to complete
-   * the verification
+   * Generate a token containing the user information during sign up
    *
    * @return sign up token containing encrypted data about the user signing up
    */
-  String startSignUp(StartSignupParam input);
+  String generateSignupToken(StartSignupParam input);
 
   /**
    * Verify the token
    *
    * @return user data extracted from the token
    */
+  @Nullable
   StartSignupParam verifySignupToken(VerifySignupToken input);
 
   /**
