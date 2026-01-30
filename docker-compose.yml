@@ -1,0 +1,15 @@
+services:
+  vekku-spring-dev:
+    image: postgres:17-alpine
+    container_name: vekku-spring-postgres
+    environment:
+      POSTGRES_USER: vekku
+      POSTGRES_PASSWORD: vekku_password
+      POSTGRES_DB: vekku_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - vekku-postgres-data:/var/lib/postgresql/data
+
+volumes:
+  vekku-postgres-data:
